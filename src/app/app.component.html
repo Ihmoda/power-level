@@ -1,20 +1,70 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+
+<fieldset class="mainfield">
+  <legend>PowerComponent</legend>
+  <div class="wrapper">
+    <div class="header">
+      <form>
+        <label> Initital Power Level:
+          <select [(ngModel)]='startval' name="powerselect">
+            <option *ngFor="let num of numbers">{{num}}</option>
+          </select>
+        </label>
+        <input type="submit" (click)="calculatePowers()" value="Calculate Powers">
+        <img src="https://vignette.wikia.nocookie.net/villainstournament/images/7/79/Goku_super_saiyan_by_jeffthesupersaiyan-d8oxtbw.jpg/revision/latest?cb=20161027142330"
+          alt="goku.jp">
+      </form>
+    </div>
+    <div></div>
+    <div></div>
+    <div>
+      <fieldset class="subfield">
+        <legend>HumanComponent</legend>
+        <app-human [human]='powers.human'>
+        </app-human>
+      </fieldset>
+    </div>
+    <div></div>
+    <div>
+      <fieldset class="subfield">
+        <legend>SaiyanComponent</legend>
+        <app-saiyan [saiyan]='powers.saiyan'>
+        </app-saiyan>
+      </fieldset>
+    </div>
+    <div></div>
+    <div>
+      <fieldset class="subfield">
+        <legend>SupersaiyanComponent</legend>
+        <app-supersaiyan [supersaiyan]='powers.supersaiyan'>
+        </app-supersaiyan>
+      </fieldset>
+    </div>
+    <div></div>
+    <div></div>
+    <div>
+      <fieldset class="subfield">
+        <legend>SupersaiyanTwoComponent</legend>
+        <app-supersaiyantwo [supersaiyantwo]='powers.supersaiyantwo'>
+        </app-supersaiyantwo>
+      </fieldset>
+    </div>
+    <div></div>
+    <div>
+      <fieldset class="subfield">
+        <legend>SupersaiyanThreeComponent</legend>
+        <app-supersaiyanthree [supersaiyanthree]='powers.supersaiyanthree'>
+        </app-supersaiyanthree>
+      </fieldset>
+    </div>
+    <div></div>
+    <div>
+      <fieldset class="subfield">
+        <legend>SupersaiyanFourComponent</legend>
+        <app-supersaiyanfour [supersaiyanfour]='powers.supersaiyanfour'>
+        </app-supersaiyanfour>
+      </fieldset>
+    </div>
+    <div></div>
+  </div>
+</fieldset>
